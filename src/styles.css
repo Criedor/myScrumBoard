@@ -71,16 +71,13 @@ h2 {
 .content textarea{
     text-align: left;
     font-size: 1.25em;
-    padding: 0 50px 0 50px;
-    overflow: auto;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 10;
-    -webkit-box-orient: vertical;
-    cursor: pointer;
+    cursor: text;
+    margin: auto;
+    width: auto;
 }
 
 .icon {
+    padding-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
