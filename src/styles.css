@@ -44,7 +44,6 @@ h2 {
 
 
 .show {
-    display: visible;
     position: absolute;
     left: 0;
     right: 0;
@@ -58,6 +57,10 @@ h2 {
     background-size: 100% 100%; 
 }
 
+.display {
+    display: none;
+}
+
 .content{
     margin-top: 100px;
     display: flex;
@@ -65,14 +68,14 @@ h2 {
     width: 560px;
 }
 
-.content p{
+.content textarea{
     text-align: left;
     font-size: 1.25em;
     padding: 0 50px 0 50px;
     overflow: auto;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 10; /* number of lines to show */
+    -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
     cursor: pointer;
 }

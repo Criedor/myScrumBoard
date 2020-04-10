@@ -25,12 +25,12 @@
             </header>
 
             <main>
-                <div class="show">
+                <div class="show display" id="showNew">
                     <div class="content">
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel, repudiandae quisquam autem dolorem tenetur libero ipsa earum odit molestias necessitatibus minima similique, porro doloremque reiciendis pariatur dolor facere ratione labore inventore numquam enim repellat saepe? Dolore, sunt obcaecati nulla aspernatur incidunt consequatur id hic necessitatibus laborum corporis? Illum delectus dolorum enim commodi maxime velit aspernatur corporis, dolor illo! Similique placeat perspiciatis natus quas aperiam porro harum! Deleniti sed, deserunt velit possimus, nesciunt cumque ipsam libero ratione modi eum soluta veniam ipsa eligendi. Maiores, placeat neque facilis ad et suscipit saepe tenetur commodi accusantium accusamus, sapiente dolores assumenda! Reiciendis nulla molestiae nisi optio consequatur neque nostrum similique corporis deserunt ab sint illum magnam rem quia delectus natus quos corrupti est suscipit laborum vel cum, ad a at! Rem rerum ea saepe. Harum dolor perspiciatis voluptas non esse, mollitia repellat quas fuga odio doloribus quam aliquam deserunt illo, alias repellendus assumenda culpa. Accusantium consequatur dolore officia est, dignissimos nesciunt excepturi placeat minima. Doloremque eaque nulla laudantium veritatis aspernatur voluptatem esse, repudiandae blanditiis ab porro quos qui illo doloribus quae aliquid sapiente dolore. Quae aliquid nihil doloribus aspernatur blanditiis minima porro minus labore laboriosam. Iusto aliquid odit hic illo nemo ratione aperiam excepturi.</p>
+                        <textarea rows="10" cols="50" id="textInput" placeholder="Put your task in here!"></textarea>
                         <div class="icon">
                             <img class="icon" src="src/img/mark.png" alt="Mark"> 
-                            <img class="icon" src="src/img/check.png" alt="Check"> 
+                            <img class="icon" onclick="save()" src="src/img/check.png" alt="Check"> 
                             <img class="icon" src="src/img/delete.png" alt="Delete"> 
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                             <img src="src/img/hanginthere.png" alt="hang in there">
                         </div>
                         <div class="newPostIt">
-                            <button class="newPostIt"><p>Click to create new Task</p></button>
+                            <button class="newPostIt" onclick="makeDiv();showNew();"><p>Click to create new Task</p></button>
                         </div>
                         <div class="trash">
                             <img src="/src/img/trash.png" alt="Trash">
@@ -50,7 +50,7 @@
                     <div class="backlog">
                         <h2>BACKLOG</h2>
                         <div class="backlog_grid">
-                            <div class="postIt">
+                            <!-- <div class="postIt">
                                 <p>This is a Task, that is a lot longer then the rest to test the behaviour</p>
                             </div>
                             <div class="postIt">
@@ -79,7 +79,7 @@
                             </div>
                             <div class="postIt">
                                 <p>This is a Task</p>
-                            </div>
+                            </div> -->
                             <div class="postIt">
                                 <p>This is a Task</p>
                             </div>
@@ -147,5 +147,8 @@
                 </div>
             </footer>
         </div>
+
+
+    <script src="script.js"></script>    
     </body>
 </html>
