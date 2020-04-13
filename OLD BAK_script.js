@@ -6,16 +6,16 @@ const backlogGrid  = document.getElementsByClassName("backlog_grid")[0]
 const toDoGrid = document.getElementsByClassName("toDo_grid")[0]
 const inProgressGrid = document.getElementsByClassName("inProgress_grid")[0]
 const doneGrid = document.getElementsByClassName("done_grid")[0]
+const closeShow = document.getElementById("closeButton")
 
-var item = 0
-
+closeShow.addEventListener("click",close)
 backlogGrid.addEventListener("click", getId)
 doneGrid.addEventListener("click", getId)
 inProgressGrid.addEventListener("click", getId)
 toDoGrid.addEventListener("click", getId)
 
-function makeDiv () {
 
+function makeDiv () {
     if (show.classList.contains("display")){
         showNew();
     var div = document.createElement("div");
@@ -56,7 +56,7 @@ function save () {
 
 
 function moveTo() {
-    var selectedDiv = document.getElementById("selectedID")
+    var selectedDiv = document.getElementById(selectedID)
     var moveToColumn = document.getElementById("moveTo").selectedIndex;
 
     switch (moveToColumn) {
@@ -75,7 +75,9 @@ function moveTo() {
 
 
 function getId(i) {
-        item = i.target; 
+    if (show.classList.contains("display")){
+
+        selectedID = i.target.id; 
  
         switch (true) {
         case i.target.parentElement.classList.contains("backlog_grid"): selectedColumn = 0;
@@ -91,13 +93,32 @@ function getId(i) {
         break;
         }
         edit();
+    }
 }
 
 
 
 function edit() {
         showNew ()
-        document.getElementsByClassName("content")[1].value = document.getElementById(item.id).firstChild.innerHTML;
+        document.getElementsByClassName("content")[1].value = document.getElementById(selectedID).firstChild.innerHTML;
         document.getElementById("moveTo").selectedIndex = selectedColumn
+}
 
+
+function close() {
+    if (document.getElementById("textInput").value == ""){
+        deleteTodo()
+    } else {
+    show.classList.toggle("display");
+    }
+}
+
+
+function deleteTodo(){
+
+    let todo = document.getElementById(selectedID);
+    todo.remove();
+    document.getElementById("textInput").value = "";
+    show.classList.toggle("display");
+    
 }
