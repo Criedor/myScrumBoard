@@ -28,16 +28,7 @@
         <main>
             <div class="show display" id="showNew">
                 <div class="content">
-                    <div class="show_close" onclick="">
-                        <p>X</p>
-                    </div>
-                    <textarea class="content" rows="8" cols="40" id="textInput"
-                        placeholder="Put your task in here!"></textarea>
-                    <div class="icon">
-                        <img class="icon" onclick="moveTo()" src="src/img/mark.png" alt="Mark">
-                        <img class="icon" onclick="save()" src="src/img/check.png" alt="Check">
-                        <img class="icon" src="src/img/delete.png" alt="Delete">
-                    </div>
+                    <button class="show_close" id="closeButton">X</button>
                     <div class="moveTo">
                         <p>Section</Section></p>
                         <select name="moveTo" id="moveTo">
@@ -47,6 +38,15 @@
                             <option value="3">Done</option>
                         </select>
                     </div>
+                    <img src="src/img/line.png">
+                    <textarea class="content" rows="9" cols="45" id="textInput"
+                        placeholder="Put your task in here!"></textarea>
+                    <div class="icon">
+                        <img class="icon" onclick="newPostIt.moveTo()" src="src/img/mark.png" alt="Move">
+                        <img class="icon" onclick="newPostIt.save()" src="src/img/check.png" alt="Save">
+                        <img class="icon" onclick="newPostIt.deleteTodo()" src="src/img/delete.png" alt="Delete">
+                    </div>
+
                 </div>
             </div>
             <div class="board_grid">
@@ -55,7 +55,7 @@
                         <img src="src/img/hanginthere.png" alt="hang in there">
                     </div>
                     <div class="newPostIt">
-                        <button class="newPostIt" onclick="makeDiv()">
+                        <button class="newPostIt" onclick="newPostIt.makeDiv()">
                             <p>Click to create new Task</p>
                         </button>
                     </div>
@@ -94,7 +94,7 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="oop.js"></script>
 </body>
 
 </html>

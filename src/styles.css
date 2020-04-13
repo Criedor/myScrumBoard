@@ -39,6 +39,7 @@ h2 {
     display: -webkit-box;
     -webkit-line-clamp: 4; /* number of lines to show */
     -webkit-box-orient: vertical;
+    pointer-events: none;
 }
 
 
@@ -59,10 +60,11 @@ h2 {
 
 .show_close{
     align-self: flex-end;
-    font-size: 40px;
-    font-weight: 700;
-    margin-right: 20px;
-    cursor: pointer;    
+    font-size: 26px;
+    font-weight: 900;
+    margin-right: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
 }
 
 .display {
@@ -79,13 +81,18 @@ h2 {
 .content textarea {
     text-align: left;
     cursor: text;
-    margin: auto;
+    margin: auto 50px;
     width: auto;
     font-family: Permanent Marker;
     font-size: 1.4em;
     color: black;
     background-color: rgba(0, 0, 0, 0);
     border: hidden;
+}
+
+.content img{
+    margin: 0 0 0 50px;
+    width: 85%;
 }
 
 .icon {
@@ -103,13 +110,14 @@ h2 {
 
 .moveTo {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: baseline;
     padding: 0;
 }
 
 .moveTo p,select {
-    padding: 10px;
+    margin: 0 0 10px 50px;
+    padding: 0;
     text-align: right;
     font-size: 1.6em;
     background-color: rgba(0, 0, 0, 0);
@@ -208,6 +216,7 @@ h2 {
     border: 0;
     padding: 0;
 }
+
 .trash {
     overflow: hidden;
 }
@@ -232,6 +241,7 @@ h2 {
     margin: 0 20px 20px 20px;
     background-color: grey;
     padding: 20px;
+    height: 80%;
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: auto;
@@ -256,6 +266,7 @@ h2 {
     margin: 0 20px 20px 20px;
     background-color: #ffcc00;
     padding: 20px;
+    height: 80%;
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: auto;
@@ -279,6 +290,7 @@ h2 {
     margin: 0 20px 20px 20px;
     background-color: #ff6600;
     padding: 20px;
+    height: 80%;
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: auto;
@@ -302,6 +314,7 @@ h2 {
     margin: 0 20px 20px 20px;
     background-color: green;
     padding: 20px;
+    height: 80%;
     display: grid;
     grid-template-rows: repeat(5, auto);
     grid-template-columns: auto;
