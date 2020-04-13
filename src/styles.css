@@ -25,7 +25,7 @@ h2 {
 
     text-decoration: none;
     cursor: pointer;
-    background: url("src/img/postit.png");
+    background: url("img/postit.png");
     background-repeat:no-repeat;
     background-size: 100% 100%; 
     transition: width 2s, height 4s;
@@ -52,7 +52,7 @@ h2 {
     width: 600px;
     height: 600px;
     text-decoration: none;
-    background: url("src/img/postit2.png");
+    background: url("img/postit2.png");
     background-repeat:no-repeat;
     background-size: 100% 100%; 
 }
@@ -202,7 +202,7 @@ h2 {
     width: 200px;
     text-decoration: none;
     cursor: pointer;
-    background: url("src/img/postit.png");
+    background: url("img/postit.png");
     background-repeat:no-repeat;
     background-size: 100% 100%; 
     border: 0;
@@ -222,7 +222,7 @@ h2 {
 .backlog {
     grid-column: 2;
     text-align: center;
-    background-image: url("src/img/floor.png");
+    background-image: url("img/floor.png");
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: auto 85px;
@@ -246,7 +246,7 @@ h2 {
 .toDo {
     grid-column: 3;
     text-align: center;
-    background-image: url("src/img/floor.png");
+    background-image: url("img/floor.png");
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: auto 85px;
@@ -269,7 +269,7 @@ h2 {
 .inProgress {
     grid-column: 4;
     text-align: center;
-    background-image: url("src/img/floor.png");
+    background-image: url("img/floor.png");
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: auto 85px;
@@ -292,7 +292,7 @@ h2 {
 .done {
     grid-column: 5;
     text-align: center;
-    background-image: url("src/img/floor.png");
+    background-image: url("img/floor.png");
     background-repeat: repeat-x;
     background-position: bottom;
     background-size: auto 85px;
