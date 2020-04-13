@@ -57,27 +57,39 @@ h2 {
     background-size: 100% 100%; 
 }
 
+.show_close{
+    align-self: flex-end;
+    font-size: 40px;
+    font-weight: 700;
+    margin-right: 20px;
+    cursor: pointer;    
+}
+
 .display {
     display: none;
 }
 
 .content{
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     width: 560px;
 }
 
-.content textarea{
+.content textarea {
     text-align: left;
-    font-size: 1.25em;
     cursor: text;
     margin: auto;
     width: auto;
+    font-family: Permanent Marker;
+    font-size: 1.4em;
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    border: hidden;
 }
 
 .icon {
-    padding-top: 20px;
+    padding-top: 10px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -88,6 +100,24 @@ h2 {
     width: 80px;
     height: auto;
 }
+
+.moveTo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding: 0;
+}
+
+.moveTo p,select {
+    padding: 10px;
+    text-align: right;
+    font-size: 1.6em;
+    background-color: rgba(0, 0, 0, 0);
+    border: hidden;
+}
+
+
+
 
 .wrapper{
     display: grid;
@@ -178,11 +208,15 @@ h2 {
     border: 0;
     padding: 0;
 }
+.trash {
+    overflow: hidden;
+}
 
 .trash img{
     max-width: 550px;
     height: auto;
     vertical-align: bottom;
+    cursor: pointer;
 }
 
 .backlog {
@@ -286,3 +320,144 @@ h2 {
 
 
 
+@media screen and (max-width: 1440px){
+    .postIt{
+        max-width: 150px;
+        min-width: 150px;
+        max-height: 124px;
+        min-height: 124px;
+    }
+    
+    .postIt p {
+        padding: 0 30% 0 10%; 
+    }
+
+    .wrapper{
+        grid-template-rows: 50px 1fr 50px;
+    }
+    
+    .header {
+        height: 50px;
+    }
+
+    .home h1 {
+        font-size: 18pt;
+    }
+    
+    .share button{
+        width: 100px;
+        font-size: 0.7rem;
+     }
+    
+     .board_grid{
+        grid-template-columns: 300px 1fr 1fr 1fr 1fr;
+    }
+    
+    .hangInThere img {
+        padding: 50px 0 50px 20%;
+        max-width: 150px;
+    }
+    
+    .newPostIt button{
+        margin-left: 40px;
+        height: 112px;
+        width: 150px;
+    }
+
+    .trash img{
+        max-width: 400px;
+    }
+    
+    .backlog {
+        background-size: auto 61px;
+    }
+    
+    .toDo {
+        background-size: auto 61px;
+    }
+    
+    .inProgress {
+        background-size: auto 61px;
+    }
+    
+    .done {
+        background-size: auto 61px;
+    }
+
+    .footer{
+        height: 50px;
+    }
+    
+}
+
+
+
+@media screen and (max-width: 1680px){
+    .postIt{
+        max-width: 188px;
+        min-width: 188px;
+        max-height: 155px;
+        min-height: 155px;
+    }
+    
+    .postIt p {
+        padding: 0 30% 0 10%; 
+    }
+
+    .wrapper{
+        grid-template-rows: 50px 1fr 50px;
+    }
+    
+    .header {
+        height: 50px;
+    }
+
+    .home h1 {
+        font-size: 18pt;
+    }
+    
+    .share button{
+        width: 100px;
+        font-size: 0.7rem;
+     }
+    
+     .board_grid{
+        grid-template-columns: 300px 1fr 1fr 1fr 1fr;
+    }
+    
+    .hangInThere img {
+        padding: 50px 0 120px 20%;
+        max-width: 180px;
+    }
+    
+    .newPostIt button{
+        margin-left: 40px;
+        height: 112px;
+        width: 150px;
+    }
+
+    .trash img{
+        max-width: 450px;
+    }
+    
+    .backlog {
+        background-size: auto 69px;
+    }
+    
+    .toDo {
+        background-size: auto 69px;
+    }
+    
+    .inProgress {
+        background-size: auto 69px;
+    }
+    
+    .done {
+        background-size: auto 69px;
+    }
+
+    .footer{
+        height: 50px;
+    }
+    
+}

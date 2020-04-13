@@ -1,154 +1,100 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My SCRUM Board</title>
-        <meta charset="UTF-8" />
-        <meta name="description" content="My SCRUM Board">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="src/styles.css" />
-        <link rel="stylesheet" href="src/animation.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <title>My SCRUM Board</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="My SCRUM Board">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/animation.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
 
 
-    <body>
-        <div class="wrapper">   
-            <header>
-                <div class="header">
-                    <div class="home">
-                        <h1>My SCRUM Board</h1>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <div class="home">
+                    <h1>My SCRUM Board</h1>
+                </div>
+                <div class="share">
+                    <button type="button" class="share">Share URL</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="show display" id="showNew">
+                <div class="content">
+                    <div class="show_close" onclick="">
+                        <p>X</p>
                     </div>
-                    <div class="share">
-                        <button type="button" class="share">Share URL</button>
+                    <textarea class="content" rows="8" cols="40" id="textInput"
+                        placeholder="Put your task in here!"></textarea>
+                    <div class="icon">
+                        <img class="icon" onclick="moveTo()" src="src/img/mark.png" alt="Mark">
+                        <img class="icon" onclick="save()" src="src/img/check.png" alt="Check">
+                        <img class="icon" src="src/img/delete.png" alt="Delete">
+                    </div>
+                    <div class="moveTo">
+                        <p>Section</Section></p>
+                        <select name="moveTo" id="moveTo">
+                            <option value="0">Backlog</option>
+                            <option value="1">To Do</option>
+                            <option value="2">In Progress</option>
+                            <option value="3">Done</option>
+                        </select>
                     </div>
                 </div>
-            </header>
-
-            <main>
-                <div class="show display" id="showNew">
-                    <div class="content">
-                        <textarea class="content" rows="15" cols="50" id="textInput" placeholder="Put your task in here!"></textarea>
-                        <div class="icon">
-                            <img class="icon" src="src/img/mark.png" alt="Mark"> 
-                            <img class="icon" onclick="save()" src="src/img/check.png" alt="Check"> 
-                            <img class="icon" src="src/img/delete.png" alt="Delete"> 
-                        </div>
+            </div>
+            <div class="board_grid">
+                <div class="column1">
+                    <div class="hangInThere">
+                        <img src="src/img/hanginthere.png" alt="hang in there">
+                    </div>
+                    <div class="newPostIt">
+                        <button class="newPostIt" onclick="makeDiv()">
+                            <p>Click to create new Task</p>
+                        </button>
+                    </div>
+                    <div class="trash">
+                        <img src="/src/img/trash.png" alt="Trash">
                     </div>
                 </div>
-                <div class="board_grid">
-                    <div class="column1">
-                        <div class="hangInThere">
-                            <img src="src/img/hanginthere.png" alt="hang in there">
-                        </div>
-                        <div class="newPostIt">
-                            <button class="newPostIt" onclick="makeDiv();showNew();"><p>Click to create new Task</p></button>
-                        </div>
-                        <div class="trash">
-                            <img src="/src/img/trash.png" alt="Trash">
-                        </div>
-                    </div>
-                    <div class="backlog">
-                        <h2>BACKLOG</h2>
-                        <div class="backlog_grid">
-                            <!-- <div class="postIt">
-                                <p>This is a Task, that is a lot longer then the rest to test the behaviour</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div> -->
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="toDo">
-                        <h2>TO DO</h2>
-                        <div class="toDo_grid">
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="inProgress">
-                        <h2>IN PROGRESS</h2>
-                        <div class="inProgress_grid">
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                    
-                          
-                        </div>
-                    </div>
-                    <div class="done">
-                        <h2>DONE</h2>
-                        <div class="done_grid">
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-                            <div class="postIt">
-                                <p>This is a Task</p>
-                            </div>
-
-                        </div>
+                <div class="backlog">
+                    <h2>BACKLOG</h2>
+                    <div class="backlog_grid">
                     </div>
                 </div>
-            </main>
-    
-            <footer>
-                <div class="footer">
-                    placeholder
+                <div class="toDo">
+                    <h2>TO DO</h2>
+                    <div class="toDo_grid">
+                    </div>
                 </div>
-            </footer>
-        </div>
+                <div class="inProgress">
+                    <h2>IN PROGRESS</h2>
+                    <div class="inProgress_grid">
+                    </div>
+                </div>
+                <div class="done">
+                    <h2>DONE</h2>
+                    <div class="done_grid">
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer">
+                placeholder
+            </div>
+        </footer>
+    </div>
 
 
-    <script src="script.js"></script>    
-    </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
