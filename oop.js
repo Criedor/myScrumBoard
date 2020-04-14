@@ -10,6 +10,7 @@ class PostIt {
             var p = document.createElement("p");
             var t = document.createTextNode("")
             div.classList.add("postIt");
+            div.addEventListener("click",this.getId)
             p.appendChild(t);
             div.appendChild(p);
             backlogGrid.appendChild(div);
@@ -131,8 +132,3 @@ const closeShow = document.getElementById("closeButton")
 const newPostIt = new PostIt();
 
 closeShow.addEventListener("click", newPostIt.close)
-
-backlogGrid.addEventListener("click", newPostIt.getId)
-doneGrid.addEventListener("click", newPostIt.getId)
-inProgressGrid.addEventListener("click", newPostIt.getId)
-toDoGrid.addEventListener("click", newPostIt.getId)
